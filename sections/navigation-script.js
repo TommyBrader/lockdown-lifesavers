@@ -44,7 +44,7 @@ function createMainNav() {
     pages.appendChild(pageList)
     let pageLink = document.createElement('a')
     let pageName = sections[i].name.toLowerCase()
-    pageLink.setAttribute('href', `./${pageName}.html`)
+    pageLink.setAttribute('href', `../${pageName}/${pageName}-${pageName}.html`)
     pageLink.textContent = sections[i].name
     pageList.appendChild(pageLink)
     if (pageName === currentSection) {
