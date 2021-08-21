@@ -17,6 +17,7 @@ body,
   display: flex;
   justify-content: flex-start;
   flex-grow: 1;
+  margin-left: 120px;
 }
 
 #main-nav {
@@ -74,4 +75,12 @@ body,
 
 #testbox {
   height: 1000px;
+}
+
+#ll-logo {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: -60px;
+  left: 10px;
 }
