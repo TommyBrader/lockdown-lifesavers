@@ -95,6 +95,8 @@ function createSecondaryNav() {
       }
     }
   }
+  let heading = document.querySelector('#heading-main')
+  heading.textContent = currentSubSection
 }
 
 createMainNav()
@@ -102,7 +104,7 @@ createSecondaryNav()
 
 function footerNav() {
   let footer = document.querySelector('#footer')
-  footer.textContent = 'Hello'
+  footer.textContent = 'Footer'
 }
 
 footerNav()
