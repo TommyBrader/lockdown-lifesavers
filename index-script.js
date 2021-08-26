@@ -7,7 +7,7 @@ const sections = [
     saturation: '69',
     lightness: '78',
     message: 'The Information page offers information on the origins of Lockdown Lifesavers, and its purpose, as well as information surrounding lockdown in general',
-    subsections: ['About', 'Advice', 'Updates', 'Charity']
+    subsections: ['About', 'Updates']
   },
   {
     name: 'Games',
