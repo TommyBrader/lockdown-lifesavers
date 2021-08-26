@@ -35,7 +35,7 @@ const sections = [
     saturation: '74',
     lightness: '75',
     message: 'The Shop is your number one source for all your irl lockdown needs',
-    subsections: ['Shop', "Objective of Shop"]
+    subsections: ['Shop']
   },
 ]
 

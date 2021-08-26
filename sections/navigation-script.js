@@ -22,13 +22,14 @@ const sections = [
     name: 'Shop',
     color: '#8FB3EE',
     message: 'The Shop is your number one source for all your irl lockdown needs',
-    subsections: ['Shop', "Objective of Shop"]
+    subsections: ['Shop']
   },
 ]
 
 let currentPath = window.location.pathname
 let currentPage = currentPath.split('/').pop()
 let currentSection = currentPage.split('-')[0]
+let currentSubSection = (currentPage.split('-')[1]).split('.')[0]
 
 function createMainNav() {
   let header = document.querySelector('#header')
@@ -58,10 +59,14 @@ function createSecondaryNav() {
   let secondaryNav = document.createElement('nav')
   secondaryNav.setAttribute('id', 'secondary-nav')
   header.appendChild(secondaryNav)
+  let logoTag = document.createElement('a')
+  logoTag.setAttribute('href', '../../index.html')
+  secondaryNav.appendChild(logoTag)
   let logo = document.createElement('img')
   logo.setAttribute('src', '../../images/ll-logo-small.png')
   logo.setAttribute('id', 'll-logo')
-  secondaryNav.appendChild(logo)
+  logo.setAttribute('alt', 'Lockdown Lifesavers Small Logo')
+  logoTag.appendChild(logo)
   let pages = document.createElement('ul')
   pages.setAttribute('id', 'secondary-pages')
   secondaryNav.appendChild(pages)
@@ -79,6 +84,10 @@ function createSecondaryNav() {
         pageLink.textContent = sections[i].subsections[j]
         pageList.appendChild(pageLink)
         secondaryNav.style.backgroundColor = sections[i].color
+        if (subName === currentSubSection) {
+          // pageLink.style.color = 'white'
+          pageLink.style.fontWeight = 'bold'
+        }
       }
     }
   }
