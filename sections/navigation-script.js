@@ -74,6 +74,14 @@ function createSecondaryNav() {
   let pages = document.createElement('ul')
   pages.setAttribute('id', 'secondary-pages')
   secondaryNav.appendChild(pages)
+
+  let heading = document.querySelector('#heading-main')
+  heading.textContent = currentSubSection
+  let stopSpan = document.createElement('span')
+  stopSpan.textContent = '.'
+  stopSpan.setAttribute('id', 'stop')
+  heading.appendChild(stopSpan)
+
   for (i=0; i<sections.length; i++) {
     let pageName = sections[i].name.toLowerCase()
     if (pageName === currentSection) {
@@ -88,23 +96,41 @@ function createSecondaryNav() {
         pageLink.textContent = sections[i].subsections[j]
         pageList.appendChild(pageLink)
         secondaryNav.style.backgroundColor = sections[i].color
+        stopSpan.style.color = sections[i].color
         if (subName === currentSubSection) {
-          // pageLink.style.color = 'white'
           pageLink.style.fontWeight = 'bold'
         }
       }
     }
   }
-  let heading = document.querySelector('#heading-main')
-  heading.textContent = currentSubSection
+}
+
+function footerNav() {
+  let footer = document.querySelector('#footer')
+  let footerUL = document.createElement('ul')
+  footerUL.setAttribute('id', 'footer-list')
+  footer.appendChild(footerUL)
+  let footerTop = document.createElement('li')
+  footerUL.appendChild(footerTop)
+  let footerTopLink = document.createElement('a')
+  footerTopLink.setAttribute('href', '#main-nav')
+  footerTopLink.textContent = 'Back To Top'
+  footerTop.appendChild(footerTopLink)
+  let footerContact = document.createElement('li')
+  footerContact.textContent = 'Contact Us: '
+  let email = document.createElement('a')
+  email.setAttribute('href', 'mailto:tbrade01@mail.bbk.ac.uk')
+  email.textContent = 'tbrade01@mail.bbk.ac.uk'
+  footerContact.appendChild(email)
+  footerUL.appendChild(footerContact)
+  let footerGIT = document.createElement('li')
+  let GITLink = document.createElement('a')
+  GITLink.setAttribute('href', 'https://github.com/TommyBrader')
+  GITLink.textContent = 'GitHub'
+  footerGIT.appendChild(GITLink)
+  footerUL.appendChild(footerGIT)
 }
 
 createMainNav()
 createSecondaryNav()
-
-function footerNav() {
-  let footer = document.querySelector('#footer')
-  footer.textContent = 'Footer'
-}
-
 footerNav()

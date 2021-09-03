@@ -1,8 +1,10 @@
+/* Background */
 body {
   background-color: #eeeeee;
   background-image: url(../images/back.png);
 }
 
+/* Navigation */
 body,
 #main-pages,
 .main-nav-pages,
@@ -80,9 +82,15 @@ body,
   left: 15px;
 }
 
+/* General Page Stylings */
 #heading-main {
   font-size: 7rem;
   margin: 135px 0px 0px 10%;
+}
+
+#stop {
+  text-shadow: -1px 1px 0 #000000, 1px 1px 0 #000000, 1px -1px 0 #000000,
+    -1px -1px 0 #000000;
 }
 
 .content-section {
@@ -113,4 +121,28 @@ body,
   background-color: white;
   opacity: 0.8;
   border-radius: 1%;
+}
+
+/* Footer */
+#footer {
+  background-color: #888888;
+  width: 100%;
+  bottom: 0;
+}
+
+#footer ul {
+  padding: 10px;
+  margin: 0;
+}
+
+#footer ul li,
+#footer ul li a {
+  color: white;
+  font-size: 0.8rem;
+}
+
+#footer ul li {
+  padding: 10px;
+  margin-left: 10px;
+  list-style-type: none;
 }
