@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lockdown Lifesavers - Battleships</title>
     <link rel="stylesheet" href="../global-styles.css" />
+    <link rel="stylesheet" href="./stylesheets/battleships-styles.css" />
   </head>
   <body id="body">
     <header id="header"></header>
@@ -13,13 +14,134 @@
       <h1 id="heading-main"></h1>
       <section class="content-section">
         <div class="content-container">
-          <section id="section1"></section>
-          <section id="section2"></section>
+          <section id="section-only">
+            <p class="standard-text">
+              Battleships is a grid based game where the player guesses a grid
+              reference and the result is either a hit or a miss on a
+              battleship. Battleships vary in length, in our game there are 5
+              battleships and they are each 3 squares long, and all squares that
+              hold the battleship must be hit in order to sink it. The objective
+              of the game is to sink all the battleships.
+            </p>
+
+            <h2 class="sub-heading">Play Here:</h2>
+            <article id="battleships-container">
+              <div id="board">
+                <div id="message"></div>
+                <table>
+                  <tr>
+                    <th>A</th>
+                    <td id="00"></td>
+                    <td id="01"></td>
+                    <td id="02"></td>
+                    <td id="03"></td>
+                    <td id="04"></td>
+                    <td id="05"></td>
+                    <td id="06"></td>
+                    <td id="07"></td>
+                  </tr>
+                  <tr>
+                    <th>B</th>
+                    <td id="10"></td>
+                    <td id="11"></td>
+                    <td id="12"></td>
+                    <td id="13"></td>
+                    <td id="14"></td>
+                    <td id="15"></td>
+                    <td id="16"></td>
+                    <td id="17"></td>
+                  </tr>
+                  <tr>
+                    <th>C</th>
+                    <td id="20"></td>
+                    <td id="21"></td>
+                    <td id="22"></td>
+                    <td id="23"></td>
+                    <td id="24"></td>
+                    <td id="25"></td>
+                    <td id="26"></td>
+                    <td id="27"></td>
+                  </tr>
+                  <tr>
+                    <th>D</th>
+                    <td id="30"></td>
+                    <td id="31"></td>
+                    <td id="32"></td>
+                    <td id="33"></td>
+                    <td id="34"></td>
+                    <td id="35"></td>
+                    <td id="36"></td>
+                    <td id="37"></td>
+                  </tr>
+                  <tr>
+                    <th>E</th>
+                    <td id="40"></td>
+                    <td id="41"></td>
+                    <td id="42"></td>
+                    <td id="43"></td>
+                    <td id="44"></td>
+                    <td id="45"></td>
+                    <td id="46"></td>
+                    <td id="47"></td>
+                  </tr>
+                  <tr>
+                    <th>F</th>
+                    <td id="50"></td>
+                    <td id="51"></td>
+                    <td id="52"></td>
+                    <td id="53"></td>
+                    <td id="54"></td>
+                    <td id="55"></td>
+                    <td id="56"></td>
+                    <td id="57"></td>
+                  </tr>
+                  <tr>
+                    <th>G</th>
+                    <td id="60"></td>
+                    <td id="61"></td>
+                    <td id="62"></td>
+                    <td id="63"></td>
+                    <td id="64"></td>
+                    <td id="65"></td>
+                    <td id="66"></td>
+                    <td id="67"></td>
+                  </tr>
+                  <tr>
+                    <th>H</th>
+                    <td id="70"></td>
+                    <td id="71"></td>
+                    <td id="72"></td>
+                    <td id="73"></td>
+                    <td id="74"></td>
+                    <td id="75"></td>
+                    <td id="76"></td>
+                    <td id="77"></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <th>0</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                  </tr>
+                </table>
+                <form>
+                  <input type="text" id="guess" placeholder="A0" />
+                  <input type="button" id="fire-button" value="Fire!" />
+                </form>
+              </div>
+            </article>
+          </section>
         </div>
       </section>
     </main>
 
     <footer id="footer"></footer>
     <script src="../navigation-script.js"></script>
+    <script src="./scripts/battleships-script.js"></script>
   </body>
 </html>
