@@ -108,11 +108,13 @@ body,
 }
 
 #section1 {
-  width: 60%;
+  /* width: 60%; */
+  width: 800px;
 }
 
 #section2 {
-  width: 30%;
+  /* width: 30%; */
+  width: 400px;
 }
 
 #section1,
@@ -120,7 +122,7 @@ body,
 #section-only {
   border: #000000 1px solid;
   background-color: white;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   border-radius: 1%;
   height: 100%;
 }
