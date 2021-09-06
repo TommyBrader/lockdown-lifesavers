@@ -1,3 +1,18 @@
+/* About Main Box */
+#list-caption {
+  margin-left: 15px;
+}
+
+.about-list {
+  margin-right: 15px;
+  padding: 5px;
+  color: hsl(249, 69%, 68%);
+}
+
+.list-text {
+  color: hsl(0, 0%, 0%);
+}
+
 /* Penguin Box */
 #penguin-container {
   text-align: center;
@@ -5,8 +20,9 @@
 }
 
 #penguin-image {
-  width: 300px;
-  height: 300px;
+  /* width: 300px; */
+  /* height: 300px; */
+  width: 95%;
   border-radius: 10%;
   opacity: 1;
 }
@@ -14,8 +30,4 @@
 #penguin-caption {
   text-align: center;
   font-weight: bold;
-}
-
-#penguin-link {
-  color: hsl(249, 69%, 68%);
 }
