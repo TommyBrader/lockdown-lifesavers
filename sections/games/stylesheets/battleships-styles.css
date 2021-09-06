@@ -12,6 +12,7 @@
   margin: auto;
   /* background-color: blue; */
   background-image: url(../images/battleship-grid.png);
+  background-repeat: no-repeat;
   padding: 10px;
 }
 
