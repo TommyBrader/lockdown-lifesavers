@@ -3,16 +3,6 @@
   margin-left: 15px;
 }
 
-.about-list {
-  margin-right: 15px;
-  padding: 5px;
-  color: hsl(249, 69%, 68%);
-}
-
-.list-text {
-  color: hsl(0, 0%, 0%);
-}
-
 /* Penguin Box */
 #penguin-container {
   text-align: center;
