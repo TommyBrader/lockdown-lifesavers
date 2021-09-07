@@ -1,0 +1,41 @@
+.news-headline {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+  margin: 15px 15px 0 15px;
+}
+
+.not-latest {
+  margin-top: 50px;
+}
+
+.news-from {
+  margin-left: 15px;
+  color: hsl(249, 69%, 68%);
+  margin-top: 0;
+  padding: 0px 10px 10px 10px;
+}
+
+.news-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.news-image {
+  width: 300px;
+  height: 300px;
+  border: 1px black solid;
+  border-radius: 10%;
+  background-color: #eeeeee;
+}
+
+.article-link {
+  margin-bottom: 0;
+}
+
+.date-text {
+  margin-top: 0;
+  margin-left: 15px;
+  margin-bottom: 60px;
+  padding-left: 10px;
+}
