@@ -144,7 +144,7 @@ function displaytvInfo(data, tv) {
     if (data.genres.length === 1 || i === data.genres.length - 1) {
       tvGenre.textContent = data.genres[i].name
     } else {
-      tvGenre.textContent = `${data.genres[i].name}/`
+      tvGenre.textContent = `${data.genres[i].name} / `
     }
     tvGenreText.appendChild(tvGenre)
   }

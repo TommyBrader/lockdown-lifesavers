@@ -135,8 +135,6 @@ const filmsArticle = document.querySelector('#films-article')
 
 // Function to Display Reccomended Films
 function displayFilmsInfo(data, film) {
-  console.log(data)
-
   const filmDivide = document.createElement('div')
   filmDivide.classList.add('activities-divide')
   filmsArticle.appendChild(filmDivide)
@@ -174,7 +172,7 @@ function displayFilmsInfo(data, film) {
     if (data.genres.length === 1 || i === data.genres.length - 1) {
       filmGenre.textContent = data.genres[i].name
     } else {
-      filmGenre.textContent = `${data.genres[i].name}/`
+      filmGenre.textContent = `${data.genres[i].name} / `
     }
     filmGenreText.appendChild(filmGenre)
   }
@@ -215,7 +213,6 @@ function removeButtonStyle() {
 
 // Event Listeners for Button Presses
 netflixButton.addEventListener('click', function() {
-  console.log('Netflix Pressed')
   // Reset other button styles
   removeButtonStyle()
 
@@ -242,7 +239,6 @@ netflixButton.addEventListener('click', function() {
 })
 
 primeButton.addEventListener('click', function() {
-  console.log('Prime Pressed')
   // Reset other button styles
   removeButtonStyle()
 
@@ -269,7 +265,6 @@ primeButton.addEventListener('click', function() {
 })
 
 disneyButton.addEventListener('click', function() {
-  console.log('Netflix Pressed')
   // Reset other button styles
   removeButtonStyle()
 
@@ -294,3 +289,98 @@ disneyButton.addEventListener('click', function() {
     })
   }
 })
+
+// Random Film Section
+const randomFilmArticle = document.querySelector('#random-film-article')
+
+function displayRandomFilmsInfo(data) {
+  console.log(data)
+  const filmDivide = document.createElement('div')
+  filmDivide.classList.add('activities-divide')
+  randomFilmArticle.appendChild(filmDivide)
+
+  const filmName = document.createElement('h3')
+  filmName.classList.add('film-name')
+  const filmNameLink = document.createElement('a')
+  filmNameLink.classList.add('film-name-link')
+  filmNameLink.setAttribute('target', '_blank')
+  filmNameLink.setAttribute('href', `https://www.themoviedb.org/movie/${data.id}`)
+  filmNameLink.textContent = data.title
+  filmName.appendChild(filmNameLink)
+  randomFilmArticle.appendChild(filmName)
+
+  const filmImageContainer = document.createElement('figure')
+  filmImageContainer.classList.add('random-image-container')
+  const filmImage = document.createElement('img')
+  filmImage.classList.add('random-image')
+  filmImage.setAttribute('alt', `Image from ${data.title}`)
+  filmImage.setAttribute('src', './images/random-media.png')
+  filmImageContainer.appendChild(filmImage)
+  randomFilmArticle.appendChild(filmImageContainer)
+
+  const filmGenreText = document.createElement('h4')
+  filmGenreText.classList.add('film-genre-text')
+  if (data.genres.length != 0) {
+    filmGenreText.textContent = 'Genre: '
+  }
+  for (i=0; i<data.genres.length; i++) {
+    const filmGenre = document.createElement('span')
+    filmGenre.classList.add('film-genre')
+    if (data.genres.length === 1 || i === data.genres.length - 1) {
+      filmGenre.textContent = data.genres[i].name
+    } else {
+      filmGenre.textContent = `${data.genres[i].name} / `
+    }
+    filmGenreText.appendChild(filmGenre)
+  }
+  randomFilmArticle.appendChild(filmGenreText)
+
+  const filmDescription = document.createElement('p')
+  filmDescription.classList.add('standard-text')
+  let runtime = ''
+  if(data.runtime){
+    runtime = `Runtime: ${data.runtime} minutes.`
+  }
+  filmDescription.textContent = `${data.overview} ${runtime}`
+  randomFilmArticle.appendChild(filmDescription)
+
+  const filmDate = document.createElement('h4')
+  filmDate.classList.add('film-date')
+  filmDate.textContent = `Released: ${data.release_date.substring(0,4)}`
+  randomFilmArticle.appendChild(filmDate)
+  const filmScore = document.createElement('h4')
+  filmScore.classList.add('film-score')
+  filmScore.textContent = `TMDB Score: `
+  const filmScoreSpan = document.createElement('span')
+  filmScoreSpan.classList.add('film-score-span')
+  filmScoreSpan.textContent = `${data.vote_average}/10`
+  filmScore.appendChild(filmScoreSpan)
+  randomFilmArticle.appendChild(filmScore)
+}
+
+function loadRandomFilmApp() {
+  // Generate random ID
+  let randomID = Math.floor(Math.random() * 683996)
+
+  // Clear Section
+  randomFilmArticle.textContent = ''
+
+
+
+  // Create Section
+  const API_KEY = '0d7501914a76e63d57c4a39b330f09de'
+  const PROXY_URL = 'https://api.themoviedb.org/3/movie/'
+  fetch(`${PROXY_URL}${randomID}?api_key=${API_KEY}`, {
+  "method": "GET"
+ }).then(function(res) {
+    return res.json()
+  }).then(function(data) {
+    if (data.success === false){
+      location.reload()
+    } else {
+      displayRandomFilmsInfo(data)
+    }
+  })
+}
+
+loadRandomFilmApp()

@@ -1,0 +1,21 @@
+#button-row1,
+#button-row2 {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+.activities-button {
+  width: 300px;
+  height: 200px;
+  border: 1px black solid;
+  border-radius: 10%;
+  background-color: hsl(0, 71%, 72%);
+  color: white;
+  font-size: 3rem;
+}
+
+.activities-button:hover {
+  cursor: pointer;
+  background-color: hsl(0, 71%, 67%);
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lockdown Lifesavers - Activities</title>
     <link rel="stylesheet" href="../global-styles.css" />
+    <link rel="stylesheet" href="./stylesheets/activities-activities-styles.css">
   </head>
   <body id="body">
     <header id="header"></header>
@@ -13,13 +14,37 @@
       <h1 id="heading-main"></h1>
       <section class="content-section">
         <div class="content-container">
-          <section id="section1"></section>
-          <section id="section2"></section>
+          <section id="section-only">
+            <p class="standard-text">
+              The Activities page offers some suggestions on how you can spend
+              your time in lockdown. This can range from active activities such
+              as exercises and recipes but also some more passive activities
+              like film and TV reccomendations.
+            </p>
+            <p class="standard-text">
+              The film and TV pages are made with the help of the
+              <a
+                href="https://www.themoviedb.org/"
+                target="_blank"
+                class="activities-link"
+                >TMDB</a
+              >
+              API but the choices are personally chosen reccomendations in a
+              number of set categories.
+              <article id="button-row1">
+                <button class="activities-button">Films</button><button class="activities-button">TV</button>
+              </article>
+              <article id="button-row2">
+                <button class="activities-button">Exercises</button><button class="activities-button">Recipes</button>
+              </article>
+            </p>
+          </section>
         </div>
       </section>
     </main>
 
     <footer id="footer"></footer>
     <script src="../navigation-script.js"></script>
+    <script src="./scripts/activities-activities.js"></script>
   </body>
 </html>

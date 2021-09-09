@@ -105,3 +105,17 @@
   border-radius: 10px;
   padding: 5px;
 }
+
+/* Random Media */
+.random-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.random-image {
+  width: 200px;
+  height: 200px;
+  border: 1px black solid;
+  border-radius: 10%;
+  background-color: #eeeeee;
+}
