@@ -16,7 +16,7 @@ const sections = [
     saturation: '65',
     lightness: '81',
     message: 'The Games page is a collection of some fun puzzles and games that can be played in browser',
-    subsections: ['Games', 'Battleships', 'Wordsearch', 'Skyscrapers', 'Minesweeper']
+    subsections: ['Games', 'Battleships', 'Skyscrapers']
   },
   {
     name: 'Activities',
@@ -26,7 +26,7 @@ const sections = [
     saturation: '71',
     lightness: '77',
     message: 'The Activities page offers some suggestions on how you can spend your time in lockdown. This can range from active activities such as exercises and recipes but also some more passive activities like film and TV reccomendations.',
-    subsections: ['Activities', 'Exercises', 'Recipes', 'Films', 'TV']
+    subsections: ['Activities', 'Films', 'TV', 'Exercises', 'Recipes']
   },
   {
     name: 'Shop',
