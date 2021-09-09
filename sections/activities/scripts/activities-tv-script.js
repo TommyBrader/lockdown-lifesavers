@@ -1,27 +1,99 @@
 // Variables
 const netflix = [
   {
-    name: 'Avatar: The Last Airbender',
+    name: 'Breaking Bad',
+    category: 'Drama',
+    id: '1396',
+    image: '',
+  },
+  {
+    name: 'The IT Crowd',
+    category: 'Comedy',
+    id: '2490',
+    image: '',
+  },
+  {
+    name: 'BoJack Horseman',
     category: 'Animation',
-    id: '246',
+    id: '61222',
+    image: '',
+  },
+  {
+    name: 'Feel Good',
+    category: 'New (2020/2021)',
+    id: '99610',
+    image: '',
+  },
+  {
+    name: 'Master of None',
+    category: 'Author\'s Pick',
+    id: '64254',
     image: '',
   },
 ]
 
 const prime = [
   {
-    name: '',
-    category: '',
-    id: '',
+    name: 'Mad Men',
+    category: 'Drama',
+    id: '1104',
+    image: '',
+  },
+  {
+    name: 'Fleabag',
+    category: 'Comedy',
+    id: '67070',
+    image: '',
+  },
+  {
+    name: 'Avatar: The Last Airbender',
+    category: 'Animation',
+    id: '246',
+    image: '',
+  },
+  {
+    name: 'Invincible',
+    category: 'New (2020/2021)',
+    id: '95557',
+    image: '',
+  },
+  {
+    name: 'Mozart in the Jungle',
+    category: 'Author\'s Pick',
+    id: '61744',
     image: '',
   },
 ]
 
 const disney = [
   {
-    name: '',
-    category: '',
-    id: '',
+    name: 'Sons of Anarchy',
+    category: 'Drama',
+    id: '1409',
+    image: '',
+  },
+  {
+    name: 'Atlanta',
+    category: 'Comedy',
+    id: '65495',
+    image: '',
+  },
+  {
+    name: 'Bob\'s Burgers',
+    category: 'Animation',
+    id: '32726',
+    image: '',
+  },
+  {
+    name: 'Loki',
+    category: 'New (2020/2021)',
+    id: '84958',
+    image: '',
+  },
+  {
+    name: 'The Mandalorian',
+    category: 'Author\'s Pick',
+    id: '82856',
     image: '',
   },
 ]
@@ -80,7 +152,11 @@ function displaytvInfo(data, tv) {
 
   const tvDescription = document.createElement('p')
   tvDescription.classList.add('standard-text')
-  tvDescription.textContent = `${data.overview} Episode Runtime: ${data.episode_run_time} minutes.`
+  let runtime = ''
+  if(data.episode_run_time.length != 0){
+    runtime = `Episode Runtime: ${data.episode_run_time[0]} minutes.`
+  }
+  tvDescription.textContent = `${data.overview} ${runtime}`
   tvsArticle.appendChild(tvDescription)
 
   const tvsBottom = document.createElement('div')
@@ -161,7 +237,7 @@ primeButton.addEventListener('click', function() {
   }).then(function(res) {
       return res.json()
     }).then(function(data) {
-      displaytvsInfo(data, tv)
+      displaytvInfo(data, tv)
     })
   }
 })
@@ -188,7 +264,7 @@ disneyButton.addEventListener('click', function() {
   }).then(function(res) {
       return res.json()
     }).then(function(data) {
-      displaytvsInfo(data, tv)
+      displaytvInfo(data, tv)
     })
   }
 })
