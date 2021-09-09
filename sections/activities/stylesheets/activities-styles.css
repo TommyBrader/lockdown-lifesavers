@@ -44,6 +44,20 @@
   color: black;
 }
 
+.film-image-container,
+.tv-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.film-image,
+.tv-image {
+  width: 600px;
+  height: 300px;
+  border: black 1px solid;
+  border-radius: 1%;
+}
+
 .film-genre-text,
 .tv-genre-text {
   margin-left: 15px;
