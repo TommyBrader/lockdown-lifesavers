@@ -193,3 +193,13 @@ body,
 .list-text {
   color: hsl(0, 0%, 0%);
 }
+
+.activities-link {
+  color: hsl(0, 71%, 67%);
+}
+
+.activities-divide {
+  border: 1px solid hsl(0, 71%, 67%);
+  width: 99.9%;
+  height: 0;
+}

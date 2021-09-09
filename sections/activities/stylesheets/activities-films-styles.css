@@ -1,0 +1,82 @@
+/* Buttons */
+#streaming-buttons-article {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.streaming-buttons {
+  background-color: white;
+  border: black solid 1px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  width: 200px;
+  height: 80px;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.streaming-buttons:hover {
+  cursor: pointer;
+  background-color: hsl(0, 71%, 67%);
+  color: white;
+}
+
+/* Films */
+.film-category {
+  color: hsl(0, 71%, 67%);
+  font-size: 1rem;
+  padding: 10px 10px 0 10px;
+  margin: 15px 15px 0 15px;
+}
+
+.film-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0 15px 0 15px;
+}
+
+.film-name-link {
+  color: black;
+}
+
+.film-genre-text {
+  margin-left: 15px;
+  margin-bottom: 0;
+  padding: 10px 10px 0 10px;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.film-genre {
+  color: hsl(0, 71%, 67%);
+}
+
+.films-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.film-date,
+.film-score {
+  margin: 0 15px 30px 15px;
+  padding: 0 10px 0 10px;
+}
+
+.film-date {
+  font-size: 1rem;
+}
+
+.film-score {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.film-score-span {
+  background-color: hsl(0, 71%, 67%);
+  color: white;
+  border: 1px black solid;
+  border-radius: 10px;
+  padding: 5px;
+}
