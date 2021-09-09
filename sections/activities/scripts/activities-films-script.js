@@ -182,7 +182,7 @@ function displayFilmsInfo(data, film) {
 
   const filmDescription = document.createElement('p')
   filmDescription.classList.add('standard-text')
-  filmDescription.textContent = data.overview
+  filmDescription.textContent = `${data.overview} Runtime: ${data.runtime} minutes.`
   filmsArticle.appendChild(filmDescription)
 
   const filmsBottom = document.createElement('div')

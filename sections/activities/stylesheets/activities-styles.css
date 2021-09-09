@@ -23,25 +23,29 @@
 }
 
 /* Films */
-.film-category {
+.film-category,
+.tv-category {
   color: hsl(0, 71%, 67%);
   font-size: 1rem;
   padding: 10px 10px 0 10px;
   margin: 15px 15px 0 15px;
 }
 
-.film-name {
+.film-name,
+.tv-name {
   font-size: 1.8rem;
   font-weight: bold;
   padding: 10px;
   margin: 0 15px 0 15px;
 }
 
-.film-name-link {
+.film-name-link,
+.tv-name-link {
   color: black;
 }
 
-.film-genre-text {
+.film-genre-text,
+.tv-genre-text {
   margin-left: 15px;
   margin-bottom: 0;
   padding: 10px 10px 0 10px;
@@ -49,31 +53,38 @@
   font-size: 1.5rem;
 }
 
-.film-genre {
+.film-genre,
+.tv-genre {
   color: hsl(0, 71%, 67%);
 }
 
-.films-bottom {
+.films-bottom,
+.tvs-bottom {
   display: flex;
   justify-content: space-between;
 }
 
 .film-date,
-.film-score {
+.film-score,
+.tv-date,
+.tv-score {
   margin: 0 15px 30px 15px;
   padding: 0 10px 0 10px;
 }
 
-.film-date {
+.film-date,
+.tv-date {
   font-size: 1rem;
 }
 
-.film-score {
+.film-score,
+.tv-score {
   font-size: 1.5rem;
   color: black;
 }
 
-.film-score-span {
+.film-score-span,
+.tv-score-span {
   background-color: hsl(0, 71%, 67%);
   color: white;
   border: 1px black solid;
