@@ -268,3 +268,98 @@ disneyButton.addEventListener('click', function() {
     })
   }
 })
+
+// Random TV Show Section
+const randomtvArticle = document.querySelector('#random-tv-article')
+
+function displayRandomTVInfo(data) {
+  console.log(data)
+  const tvDivide = document.createElement('div')
+  tvDivide.classList.add('activities-divide')
+  randomtvArticle.appendChild(tvDivide)
+
+  const tvName = document.createElement('h3')
+  tvName.classList.add('tv-name')
+  const tvNameLink = document.createElement('a')
+  tvNameLink.classList.add('tv-name-link')
+  tvNameLink.setAttribute('target', '_blank')
+  tvNameLink.setAttribute('href', `https://www.themoviedb.org/tv/${data.id}`)
+  tvNameLink.textContent = data.name
+  tvName.appendChild(tvNameLink)
+  randomtvArticle.appendChild(tvName)
+
+  const tvImageContainer = document.createElement('figure')
+  tvImageContainer.classList.add('random-image-container')
+  const tvImage = document.createElement('img')
+  tvImage.classList.add('random-image')
+  tvImage.setAttribute('alt', `Image from ${data.title}`)
+  tvImage.setAttribute('src', './images/random-media.png')
+  tvImageContainer.appendChild(tvImage)
+  randomtvArticle.appendChild(tvImageContainer)
+
+  const tvGenreText = document.createElement('h4')
+  tvGenreText.classList.add('tv-genre-text')
+  if (data.genres.length != 0) {
+    tvGenreText.textContent = 'Genre: '
+  }
+  for (i=0; i<data.genres.length; i++) {
+    const tvGenre = document.createElement('span')
+    tvGenre.classList.add('tv-genre')
+    if (data.genres.length === 1 || i === data.genres.length - 1) {
+      tvGenre.textContent = data.genres[i].name
+    } else {
+      tvGenre.textContent = `${data.genres[i].name} / `
+    }
+    tvGenreText.appendChild(tvGenre)
+  }
+  randomtvArticle.appendChild(tvGenreText)
+
+  const tvDescription = document.createElement('p')
+  tvDescription.classList.add('standard-text')
+  let runtime = ''
+  if(data.episode_run_time.length != 0){
+    runtime = `Episode Runtime: ${data.episode_run_time[0]} minutes.`
+  }
+  tvDescription.textContent = `${data.overview} ${runtime}`
+  randomtvArticle.appendChild(tvDescription)
+
+  if (data.number_of_episodes !== null && data.first_air_date !== null) {
+    const tvDate = document.createElement('h4')
+    tvDate.classList.add('tv-date')
+    tvDate.textContent = `${data.number_of_episodes} Episodes (${data.first_air_date.substring(0,4)} - ${data.last_air_date.substring(0,4)})`
+    randomtvArticle.appendChild(tvDate)
+  }
+  const tvScore = document.createElement('h4')
+  tvScore.classList.add('tv-score')
+  tvScore.textContent = `TMDB Score: `
+  const tvScoreSpan = document.createElement('span')
+  tvScoreSpan.classList.add('tv-score-span')
+  tvScoreSpan.textContent = `${data.vote_average}/10`
+  tvScore.appendChild(tvScoreSpan)
+  randomtvArticle.appendChild(tvScore)
+}
+
+function loadRandomTVApp() {
+  // Generate random ID
+  let randomID = Math.floor(Math.random() * 116490)
+
+  // Clear Section
+  randomtvArticle.textContent = ''
+
+  // Create Section
+  const API_KEY = '0d7501914a76e63d57c4a39b330f09de'
+  const PROXY_URL = 'https://api.themoviedb.org/3/tv/'
+  fetch(`${PROXY_URL}${randomID}?api_key=${API_KEY}`, {
+  "method": "GET"
+ }).then(function(res) {
+    return res.json()
+  }).then(function(data) {
+    if (data.success === false){
+      location.reload()
+    } else {
+      displayRandomTVInfo(data)
+    }
+  })
+}
+
+loadRandomTVApp()
