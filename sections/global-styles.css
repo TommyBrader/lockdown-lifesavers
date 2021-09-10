@@ -204,6 +204,12 @@ body,
   height: 0;
 }
 
+.shop-divide {
+  border: 1px solid hsl(217, 74%, 75%);
+  width: 99.9%;
+  height: 0;
+}
+
 /* Coming Soon */
 #coming-soon {
   display: flex;
