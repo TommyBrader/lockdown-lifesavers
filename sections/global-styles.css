@@ -203,3 +203,12 @@ body,
   width: 99.9%;
   height: 0;
 }
+
+/* Coming Soon */
+#coming-soon-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  text-decoration: hsl(0, 71%, 67%) underline solid;
+}
