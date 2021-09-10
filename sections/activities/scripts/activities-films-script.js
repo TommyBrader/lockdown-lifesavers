@@ -356,6 +356,14 @@ function displayRandomFilmsInfo(data) {
   filmScoreSpan.textContent = `${data.vote_average}/10`
   filmScore.appendChild(filmScoreSpan)
   randomFilmArticle.appendChild(filmScore)
+
+  if (data.vote_average == 0) {
+    const zeroMessage = document.createElement('p')
+    zeroMessage.classList.add('standard-text')
+    zeroMessage.classList.add('zero-message')
+    zeroMessage.textContent = 'A score of 0 usually means that the film is unrated on TMDB'
+    randomFilmArticle.appendChild(zeroMessage)
+  }
 }
 
 function loadRandomFilmApp() {

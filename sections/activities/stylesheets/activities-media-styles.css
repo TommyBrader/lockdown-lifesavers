@@ -119,3 +119,9 @@
   border-radius: 10%;
   background-color: #eeeeee;
 }
+
+.zero-message {
+  color: hsl(0, 71%, 67%);
+  margin-top: 0;
+  padding-top: 0;
+}
