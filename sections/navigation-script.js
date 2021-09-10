@@ -1,3 +1,4 @@
+// Section Information
 const sections = [
   {
     name: 'Information',
@@ -26,25 +27,27 @@ const sections = [
   },
 ]
 
-let currentPath = window.location.pathname
-let currentPage = currentPath.split('/').pop()
-let currentSection = currentPage.split('-')[0]
-let currentSubSection = (currentPage.split('-')[1]).split('.')[0]
+// Variables
+const currentPath = window.location.pathname
+const currentPage = currentPath.split('/').pop()
+const currentSection = currentPage.split('-')[0]
+const currentSubSection = (currentPage.split('-')[1]).split('.')[0]
 
+// Create Main Navigation Bar
 function createMainNav() {
-  let header = document.querySelector('#header')
-  let mainNav = document.createElement('nav')
+  const header = document.querySelector('#header')
+  const mainNav = document.createElement('nav')
   mainNav.setAttribute('id', 'main-nav')
   header.appendChild(mainNav)
-  let pages = document.createElement('ul')
+  const pages = document.createElement('ul')
   pages.setAttribute('id', 'main-pages')
   mainNav.appendChild(pages)
   for (i=0; i<sections.length; i++) {
-    let pageList = document.createElement('li')
+    const pageList = document.createElement('li')
     pageList.classList.add('main-nav-pages')
     pages.appendChild(pageList)
-    let pageLink = document.createElement('a')
-    let pageName = sections[i].name.toLowerCase()
+    const pageLink = document.createElement('a')
+    const pageName = sections[i].name.toLowerCase()
     pageLink.textContent = sections[i].name
     if (pageLink.textContent == 'Information') {
       pageLink.setAttribute('href', '../information/information-about.html')
@@ -58,40 +61,41 @@ function createMainNav() {
   }
 }
 
+// Create Secondary Navigation Bar
 function createSecondaryNav() {
-  let header = document.querySelector('#header')
-  let secondaryNav = document.createElement('nav')
+  const header = document.querySelector('#header')
+  const secondaryNav = document.createElement('nav')
   secondaryNav.setAttribute('id', 'secondary-nav')
   header.appendChild(secondaryNav)
-  let logoTag = document.createElement('a')
+  const logoTag = document.createElement('a')
   logoTag.setAttribute('href', '../../index.html')
   secondaryNav.appendChild(logoTag)
-  let logo = document.createElement('img')
+  const logo = document.createElement('img')
   logo.setAttribute('src', '../../images/ll-logo-small.png')
   logo.setAttribute('id', 'll-logo')
   logo.setAttribute('alt', 'Lockdown Lifesavers Small Logo')
   logoTag.appendChild(logo)
-  let pages = document.createElement('ul')
+  const pages = document.createElement('ul')
   pages.setAttribute('id', 'secondary-pages')
   secondaryNav.appendChild(pages)
 
-  let heading = document.querySelector('#heading-main')
+  const heading = document.querySelector('#heading-main')
   heading.textContent = currentSubSection
-  let stopSpan = document.createElement('span')
+  const stopSpan = document.createElement('span')
   stopSpan.textContent = '.'
   stopSpan.setAttribute('id', 'stop')
   heading.appendChild(stopSpan)
 
   for (i=0; i<sections.length; i++) {
-    let pageName = sections[i].name.toLowerCase()
+    const pageName = sections[i].name.toLowerCase()
     if (pageName === currentSection) {
       for (j=0; j<sections[i].subsections.length; j++) {
-        let pageList = document.createElement('li')
+        const pageList = document.createElement('li')
         pageList.classList.add('secondary-nav-pages')
         pages.appendChild(pageList)
-        let pageLink = document.createElement('a')
-        let subName = sections[i].subsections[j].toLowerCase()
-        let subNameLink = subName.split(' ').join('-')
+        const pageLink = document.createElement('a')
+        const subName = sections[i].subsections[j].toLowerCase()
+        const subNameLink = subName.split(' ').join('-')
         pageLink.setAttribute('href', `./${pageName}-${subNameLink}.html`)
         pageLink.textContent = sections[i].subsections[j]
         pageList.appendChild(pageLink)
@@ -101,36 +105,48 @@ function createSecondaryNav() {
           pageLink.style.fontWeight = 'bold'
         }
       }
+      // Page Finished Checked
+      const contentSection = document.querySelector('#section-only')
+      if (contentSection.textContent === '') {
+        const comingSoonMessage = document.createElement('h1')
+        comingSoonMessage.setAttribute('id', 'coming-soon')
+        comingSoonMessage.textContent = 'Coming Soon...'
+        comingSoonMessage.style.textDecoration = `underline solid ${sections[i].color}`
+        contentSection.appendChild(comingSoonMessage)
+      }
     }
   }
 }
 
+// Create Footer
 function footerNav() {
-  let footer = document.querySelector('#footer')
-  let footerUL = document.createElement('ul')
+  const footer = document.querySelector('#footer')
+  const footerUL = document.createElement('ul')
   footerUL.setAttribute('id', 'footer-list')
   footer.appendChild(footerUL)
-  let footerTop = document.createElement('li')
+  const footerTop = document.createElement('li')
   footerUL.appendChild(footerTop)
-  let footerTopLink = document.createElement('a')
+  const footerTopLink = document.createElement('a')
   footerTopLink.setAttribute('href', '#main-nav')
   footerTopLink.textContent = 'Back To Top'
   footerTop.appendChild(footerTopLink)
-  let footerContact = document.createElement('li')
+  const footerContact = document.createElement('li')
   footerContact.textContent = 'Contact Us: '
-  let email = document.createElement('a')
+  const email = document.createElement('a')
   email.setAttribute('href', 'mailto:tbrade01@mail.bbk.ac.uk')
   email.textContent = 'tbrade01@mail.bbk.ac.uk'
   footerContact.appendChild(email)
   footerUL.appendChild(footerContact)
-  let footerGIT = document.createElement('li')
-  let GITLink = document.createElement('a')
+  const footerGIT = document.createElement('li')
+  const GITLink = document.createElement('a')
   GITLink.setAttribute('href', 'https://github.com/TommyBrader')
   GITLink.textContent = 'GitHub'
   footerGIT.appendChild(GITLink)
   footerUL.appendChild(footerGIT)
 }
 
+// Call Nav Functions
 createMainNav()
 createSecondaryNav()
 footerNav()
+

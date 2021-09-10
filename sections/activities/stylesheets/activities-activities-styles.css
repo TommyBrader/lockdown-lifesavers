@@ -24,12 +24,3 @@
   cursor: pointer;
   background-color: hsl(0, 71%, 67%);
 }
-
-/* Coming Soon Message */
-#message-area {
-  text-align: center;
-}
-
-#coming-soon {
-  text-decoration: underline solid hsl(0, 71%, 67%);
-}

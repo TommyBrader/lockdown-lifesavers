@@ -205,10 +205,9 @@ body,
 }
 
 /* Coming Soon */
-#coming-soon-main {
+#coming-soon {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 5rem;
-  text-decoration: hsl(0, 71%, 67%) underline solid;
 }
