@@ -294,6 +294,10 @@ disneyButton.addEventListener('click', function() {
 const randomFilmArticle = document.querySelector('#random-film-article')
 
 function displayRandomFilmsInfo(data) {
+  if (data.adult === true) {
+    location.reload()
+  }
+
   console.log(data)
   const filmDivide = document.createElement('div')
   filmDivide.classList.add('activities-divide')

@@ -106,7 +106,7 @@ function createSecondaryNav() {
         }
       }
       // Page Finished Checked
-      const contentSection = document.querySelector('#section-only')
+      const contentSection = document.querySelector('.prime-section')
       if (contentSection.textContent === '') {
         const comingSoonMessage = document.createElement('h1')
         comingSoonMessage.setAttribute('id', 'coming-soon')
