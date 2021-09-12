@@ -2,27 +2,30 @@
 const sections = [
   {
     name: 'Information',
-    color: '#ACA1EE',
-    message: 'The Information page offers information on the origins of Lockdown Lifesavers, and its purpose, as well as information surrounding lockdown in general',
+    hue: '249',
+    saturation: '69',
+    lightness: '78',
     subsections: ['About', 'Updates']
   },
   {
     name: 'Games',
-    color: '#B9EEAE',
-    message: 'The Games page is a collection of some fun puzzles and games that can be played in browser',
+    hue: '110',
+    saturation: '65',
+    lightness: '81',
     subsections: ['Games', 'Battleships', 'Skyscrapers']
   },
   {
     name: 'Activities',
-    color: '#EE9C9C',
-    // color: '#EEC594',
-    message: 'The Activities page offers some suggestions on how you can spend your time in lockdown. This can range from active activities such as exercises and recipes but also some more passive activities like film and TV reccomendations.',
+    hue: '0',
+    saturation: '71',
+    lightness: '77',
     subsections: ['Activities', 'Films', 'TV', 'Exercises', 'Recipes']
   },
   {
     name: 'Shop',
-    color: '#8FB3EE',
-    message: 'The Shop is your number one source for all your irl lockdown needs',
+    hue: '217',
+    saturation: '74',
+    lightness: '75',
     subsections: ['Shop']
   },
 ]
@@ -56,7 +59,7 @@ function createMainNav() {
     }
     pageList.appendChild(pageLink)
     if (pageName === currentSection) {
-      pageLink.style.borderBottom = `solid 3px ${sections[i].color}`
+      pageLink.style.borderBottom = `solid 3px hsl(${sections[i].hue}, ${sections[i].saturation}%, ${sections[i].lightness}%)`
     }
   }
 }
@@ -99,8 +102,8 @@ function createSecondaryNav() {
         pageLink.setAttribute('href', `./${pageName}-${subNameLink}.html`)
         pageLink.textContent = sections[i].subsections[j]
         pageList.appendChild(pageLink)
-        secondaryNav.style.backgroundColor = sections[i].color
-        stopSpan.style.color = sections[i].color
+        secondaryNav.style.backgroundColor = `hsl(${sections[i].hue}, ${sections[i].saturation}%, ${sections[i].lightness}%)`
+        stopSpan.style.color = `hsl(${sections[i].hue}, ${sections[i].saturation}%, ${sections[i].lightness}%)`
         if (subName === currentSubSection) {
           pageLink.style.fontWeight = 'bold'
         }
@@ -111,7 +114,7 @@ function createSecondaryNav() {
         const comingSoonMessage = document.createElement('h1')
         comingSoonMessage.setAttribute('id', 'coming-soon')
         comingSoonMessage.textContent = 'Coming Soon...'
-        comingSoonMessage.style.textDecoration = `underline solid ${sections[i].color}`
+        comingSoonMessage.style.textDecoration = `underline solid hsl(${sections[i].hue}, ${sections[i].saturation}%, ${sections[i].lightness}%)`
         contentSection.appendChild(comingSoonMessage)
       }
     }

@@ -1,8 +1,6 @@
-let lightness
 const sections = [
   {
     name: 'Information',
-    color: '#ACA1EE',
     hue: '249',
     saturation: '69',
     lightness: '78',
@@ -11,7 +9,6 @@ const sections = [
   },
   {
     name: 'Games',
-    color: '#B9EEAE',
     hue: '110',
     saturation: '65',
     lightness: '81',
@@ -20,8 +17,6 @@ const sections = [
   },
   {
     name: 'Activities',
-    color: '#EE9C9C',
-    // color: '#EEC594',
     hue: '0',
     saturation: '71',
     lightness: '77',
@@ -30,7 +25,6 @@ const sections = [
   },
   {
     name: 'Shop',
-    color: '#8FB3EE',
     hue: '217',
     saturation: '74',
     lightness: '75',
@@ -45,8 +39,8 @@ function colorAssigner() {
     const id = element.name.toLowerCase()
     const button = document.getElementById(id)
     const div = document.getElementById(id + '-container')
-    button.style.backgroundColor = element.color
-    div.style.backgroundColor = element.color
+    button.style.backgroundColor = `hsl(${element.hue}, ${element.saturation}%, ${element.lightness}%)`
+    div.style.backgroundColor = `hsl(${element.hue}, ${element.saturation}%, ${element.lightness}%)`
   })
 }
 colorAssigner()
@@ -73,7 +67,6 @@ for (i=0; i<buttons.length; i++) {
     document.getElementById(buttonID).style.fontSize = '3.4rem'
     document.body.style.transition = '1s'
     const lighter = parseInt(section.lightness) + 10
-    console.log(lighter)
     document.body.style.backgroundColor = `hsl(${section.hue}, ${section.saturation}%, ${lighter}%)`
     document.body.style.backgroundImage = `url(./images/${buttonID}-back.png)`
 
