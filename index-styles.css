@@ -7,7 +7,6 @@ body {
 
 #logo,
 .section {
-  /* border: 3px solid white; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,9 +15,6 @@ body {
 #logo {
   width: 495px;
   height: 275px;
-  /* border-radius: 30%;
-  background-color: black;
-  color: white; */
   margin: -50px;
 }
 

@@ -63,15 +63,15 @@ const accessories = [
 const sports = [
   {
     id: '0',
-    name: 'Lockdown Lifesavers Unisex White T-Shirt - Big Logo',
-    imagePath: './images/white-t-big-logo.jpg',
-    price: '11.99',
+    name: 'Lockdown Lifesavers Unisex Sports Top',
+    imagePath: './images/sports-top.jpg',
+    price: '9.99',
   },
   {
     id: '1',
-    name: 'Lockdown Lifesavers Unisex White T-Shirt - Small Logo',
+    name: 'Badmington Kit',
     imagePath: './images/white-t-small-logo.jpg',
-    price: '11.99',
+    price: '12.99',
   },
   {
     id: '2',
@@ -193,7 +193,6 @@ function addToBasketClicked(event) {
       return
     }
   }
-  console.log(item.name + ' added to basket')
   const basketDiv = document.createElement('div')
   const basketFigure = document.createElement('figure')
   basketFigure.classList.add('product-in-basket')
@@ -204,7 +203,6 @@ function addToBasketClicked(event) {
   basketRemove.textContent = 'REMOVE'
   basketRemove.addEventListener('click', function(event) {
     event.preventDefault()
-    console.log('Remove Item Clicked')
     basketDiv.innerHTML = ''
     const index = basketList.indexOf(item.name)
     basketList.splice(index, 1)
@@ -237,7 +235,6 @@ function addToBasketClicked(event) {
   let quantity = basketQuantity.value
   basketQuantity.addEventListener('input', function(event) {
     event.preventDefault()
-    console.log(item.name + ' Quantity Increased')
     quantity = basketQuantity.value
     basketPriceSymbol.textContent = '£'
     basketPrice.textContent = (quantity * item.price).toFixed(2)
@@ -273,7 +270,6 @@ function addToBasketClicked(event) {
 
 // A function for updating the total
 function updateTotal(itemID) {
-  console.log('Update Total Function Called')
   const basketPriceArray = document.querySelectorAll('.basket-price')
   let total = 0
   for(i=0; i<basketPriceArray.length; i++) {
