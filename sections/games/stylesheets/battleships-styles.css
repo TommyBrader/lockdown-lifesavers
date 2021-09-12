@@ -18,6 +18,7 @@
 
 #battleships-container {
   text-align: center;
+  margin: 20px;
 }
 
 td {
@@ -33,4 +34,45 @@ td {
 table {
   border-spacing: 0px;
   margin: 10px auto 50px auto;
+}
+
+#guessing-container {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+#guess {
+  background-color: hsl(110, 65%, 81%);
+  color: black;
+  border: black 1px solid;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 5px;
+  width: 100px;
+  text-align: right;
+  margin: 5px;
+}
+
+#fire-button {
+  background-color: white;
+  color: black;
+  border: black 1px solid;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 5px;
+  width: 80px;
+  margin: 5px;
+  transition: 0.2s;
+}
+
+#fire-button:hover {
+  cursor: pointer;
+  background-color: hsl(110, 65%, 71%);
+  color: white;
+}
+
+.miss {
+  color: white;
 }

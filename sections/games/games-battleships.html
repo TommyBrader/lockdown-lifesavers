@@ -20,7 +20,7 @@
               Battleships is a grid based game where the player guesses a grid
               reference and the result is either a hit or a miss on a
               battleship. Battleships vary in length, in our game there are 5
-              battleships and they are each 3 squares long, and all squares that
+              battleships and they are each 4 squares long, and all squares that
               hold the battleship must be hit in order to sink it. The objective
               of the game is to sink all the battleships.
             </p>
@@ -112,8 +112,10 @@
                   </tr>
                 </table>
                 <form>
-                  <input type="text" id="guess" placeholder="A0" />
-                  <input type="button" id="fire-button" value="Fire!" />
+                  <div id="guessing-container">
+                    <input type="text" id="guess" placeholder="A0" />
+                    <input type="button" id="fire-button" value="Fire!" />
+                  </div>
                 </form>
               </div>
             </article>
