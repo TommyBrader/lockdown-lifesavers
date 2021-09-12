@@ -7,20 +7,20 @@
 }
 
 .streaming-buttons {
-  background-color: white;
-  border: black solid 1px;
+  background-color: hsl(0, 0%, 100%);
+  border: hsl(0, 0%, 0%) solid 1px;
   border-radius: 5px;
   font-size: 1.5rem;
   width: 200px;
   height: 80px;
   margin: 10px;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .streaming-buttons:hover {
   cursor: pointer;
   background-color: hsl(0, 71%, 67%);
-  color: white;
+  color: hsl(0, 0%, 100%);
 }
 
 /* Films */
@@ -42,7 +42,7 @@
 
 .film-name-link,
 .tv-name-link {
-  color: black;
+  color: hsl(0, 0%, 0%);
 }
 
 .film-image-container,
@@ -55,7 +55,7 @@
 .tv-image {
   width: 600px;
   height: 300px;
-  border: black 1px solid;
+  border: hsl(0, 0%, 0%) 1px solid;
   border-radius: 5px;
 }
 
@@ -64,7 +64,7 @@
   margin-left: 15px;
   margin-bottom: 0;
   padding: 10px 10px 0 10px;
-  color: black;
+  color: hsl(0, 0%, 0%);
   font-size: 1.5rem;
 }
 
@@ -95,14 +95,14 @@
 .film-score,
 .tv-score {
   font-size: 1.5rem;
-  color: black;
+  color: hsl(0, 0%, 0%);
 }
 
 .film-score-span,
 .tv-score-span {
   background-color: hsl(0, 71%, 67%);
-  color: white;
-  border: 1px black solid;
+  color: hsl(0, 0%, 100%);
+  border: 1px hsl(0, 0%, 0%) solid;
   border-radius: 10px;
   padding: 5px;
 }
@@ -116,9 +116,9 @@
 .random-image {
   width: 200px;
   height: 200px;
-  border: 1px black solid;
+  border: 1px hsl(0, 0%, 0%) solid;
   border-radius: 20px;
-  background-color: #eeeeee;
+  background-color: hsl(0, 0%, 93%);
 }
 
 .zero-message {

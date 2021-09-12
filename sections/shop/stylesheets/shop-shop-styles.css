@@ -7,8 +7,8 @@
 }
 
 .product-categories {
-  background-color: white;
-  border: black solid 1px;
+  background-color: hsl(0, 0%, 100%);
+  border: hsl(0, 0%, 0%) solid 1px;
   border-radius: 5px;
   font-size: 1.5rem;
   width: 200px;
@@ -20,7 +20,7 @@
 .product-categories:hover {
   cursor: pointer;
   background-color: hsl(217, 74%, 75%);
-  color: white;
+  color: hsl(0, 0%, 100%);
 }
 
 /* Products */
@@ -60,9 +60,9 @@
 .add-to-basket-button {
   font-size: 1.2rem;
   padding: 10px;
-  background-color: white;
-  color: black;
-  border: black 1px solid;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  border: hsl(0, 0%, 0%) 1px solid;
   border-radius: 5px;
   transition: 0.2s;
 }
@@ -70,7 +70,7 @@
 .add-to-basket-button:hover {
   cursor: pointer;
   background-color: hsl(217, 74%, 75%);
-  color: white;
+  color: hsl(0, 0%, 100%);
 }
 
 /* Basket */
@@ -93,17 +93,17 @@
 
 .basket-remove {
   font-size: 0.8rem;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
   margin: 20px;
-  border: 1px solid #000000;
+  border: 1px solid hsl(0, 0%, 0%);
   border-radius: 10px;
   transition: 0.2s;
 }
 
 .basket-remove:hover {
   background-color: hsl(0, 71%, 67%);
-  color: #ffffff;
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
 }
 
@@ -121,12 +121,12 @@
   font-size: 1.2rem;
   margin: 20px 20px 20px auto;
   padding: 10px;
-  background-color: #ffffff;
+  background-color: hsl(0, 0%, 100%);
   display: block;
   width: 40px;
   height: 40px;
   text-align: center;
-  border: black 1px solid;
+  border: hsl(0, 0%, 0%) 1px solid;
   border-radius: 5px;
 }
 
@@ -152,9 +152,9 @@
   margin: 0px auto 50px auto;
   padding: 20px;
   font-size: 2rem;
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #000000;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  border: 1px solid hsl(0, 0%, 0%);
   border-radius: 5px;
   transition: 0.2s;
 }
@@ -162,5 +162,5 @@
 #basket-purchase-button:hover {
   cursor: pointer;
   background-color: hsl(217, 74%, 75%);
-  color: #ffffff;
+  color: hsl(0, 0%, 100%);
 }

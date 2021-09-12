@@ -10,10 +10,10 @@
 .activities-button {
   width: 300px;
   height: 200px;
-  border: 1px black solid;
+  border: 1px hsl(0, 0%, 0%) solid;
   border-radius: 10px;
   background-color: hsl(0, 71%, 72%);
-  color: white;
+  color: hsl(0, 0%, 100%);
   font-size: 3rem;
   text-decoration: none;
   display: flex;

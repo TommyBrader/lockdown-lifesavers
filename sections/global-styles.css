@@ -2,7 +2,7 @@
 
 /* Background and Font*/
 body {
-  background-color: #eeeeee;
+  background-color: hsl(0, 0%, 93%);
   background-image: url(../images/back.png);
   font-family: "Work Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
@@ -27,7 +27,7 @@ body,
 }
 
 #main-nav {
-  background: linear-gradient(#bbbbbb, #cccccc);
+  background: linear-gradient(hsl(0, 0%, 73%), hsl(0, 0%, 80%));
   height: 80px;
   display: flex;
   align-items: center;
@@ -48,14 +48,14 @@ body,
 #main-pages li a,
 #secondary-pages li a {
   text-decoration: none;
-  color: #000000;
+  color: hsl(0, 0%, 0%);
   padding: 0 20px;
   transition: 0.2s;
 }
 
 #main-pages li a:hover,
 #secondary-pages li a:hover {
-  color: #ffffff;
+  color: hsl(0, 0%, 100%);
 }
 
 #secondary-nav {
@@ -93,8 +93,8 @@ body,
 }
 
 #stop {
-  text-shadow: -1px 1px 0 #000000, 1px 1px 0 #000000, 1px -1px 0 #000000,
-    -1px -1px 0 #000000;
+  text-shadow: -1px 1px 0 hsl(0, 0%, 0%), 1px 1px 0 hsl(0, 0%, 0%),
+    1px -1px 0 hsl(0, 0%, 0%), -1px -1px 0 hsl(0, 0%, 0%);
 }
 
 .content-section {
@@ -134,7 +134,7 @@ body,
 .standard-text {
   margin: 15px;
   padding: 10px;
-  color: #000000;
+  color: hsl(0, 0%, 0%);
   font-size: 1rem;
 }
 
@@ -155,7 +155,7 @@ body,
 
 /* Footer */
 #footer {
-  background-color: #888888;
+  background-color: hsl(0, 0%, 53%);
   width: 100%;
   bottom: 0;
 }
@@ -167,7 +167,7 @@ body,
 
 #footer ul li,
 #footer ul li a {
-  color: white;
+  color: hsl(0, 0%, 100%);
   font-size: 0.8rem;
 }
 
@@ -197,6 +197,7 @@ body,
   color: hsl(0, 0%, 0%);
 }
 
+/* Activities */
 .activities-link {
   color: hsl(0, 71%, 67%);
 }
@@ -207,6 +208,7 @@ body,
   height: 0;
 }
 
+/* Shop */
 .shop-divide {
   border: 1px solid hsl(217, 74%, 75%);
   width: 99.9%;
