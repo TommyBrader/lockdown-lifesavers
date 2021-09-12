@@ -64,7 +64,11 @@ for (i=0; i<buttons.length; i++) {
     const buttonID = section.name.toLowerCase()
     document.getElementById(buttonID).style.width = '100%'
     document.getElementById(buttonID).style.height = '100%'
-    document.getElementById(buttonID).style.fontSize = '3.4rem'
+    if (window.screen.width <= 1055) {
+      document.getElementById(buttonID).style.fontSize = '2.3rem'
+    } else {
+      document.getElementById(buttonID).style.fontSize = '3.4rem'
+    }
     document.body.style.transition = '1s'
     const lighter = parseInt(section.lightness) + 10
     document.body.style.backgroundColor = `hsl(${section.hue}, ${section.saturation}%, ${lighter}%)`
