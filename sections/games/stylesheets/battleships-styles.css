@@ -10,7 +10,6 @@
   width: 526px;
   height: 560px;
   margin: auto;
-  /* background-color: blue; */
   background-image: url(../images/battleship-grid.png);
   background-repeat: no-repeat;
   padding: 10px;
@@ -28,7 +27,7 @@ td {
   background-color: hsl(110, 65%, 81%);
   background-image: url(../images/battleships-wave.png);
   background-repeat: repeat;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
 }
 
 table {
