@@ -42,21 +42,21 @@ const clothing = [
 const accessories = [
   {
     id: '0',
-    name: 'Lockdown Lifesavers Unisex White T-Shirt - Big Logo',
-    imagePath: './images/white-t-big-logo.jpg',
-    price: '11.99',
+    name: 'Lockdown Lifesavers Mug',
+    imagePath: './images/mug.jpg',
+    price: '4.99',
   },
   {
     id: '1',
-    name: 'Lockdown Lifesavers Unisex White T-Shirt - Small Logo',
-    imagePath: './images/white-t-small-logo.jpg',
-    price: '11.99',
+    name: 'Lockdown Lifesavers Phone Case',
+    imagePath: './images/phone-case.jpg',
+    price: '2.99',
   },
   {
     id: '2',
-    name: 'Lockdown Lifesavers Unisex White T-Shirt - Categories',
-    imagePath: './images/white-t-cat.jpg',
-    price: '11.99',
+    name: 'Lockdown Lifesavers Cushion',
+    imagePath: './images/cushion.jpg',
+    price: '5.99',
   },
 ]
 
@@ -69,21 +69,21 @@ const sports = [
   },
   {
     id: '1',
-    name: 'Badmington Kit',
-    imagePath: './images/white-t-small-logo.jpg',
-    price: '12.99',
+    name: 'Badminton Kit',
+    imagePath: './images/badminton.jpg',
+    price: '24.99',
   },
   {
     id: '2',
-    name: 'Lockdown Lifesavers Unisex White T-Shirt - Categories',
-    imagePath: './images/white-t-cat.jpg',
-    price: '11.99',
+    name: 'Lockdown Lifesavers Football',
+    imagePath: './images/football.jpg',
+    price: '7.99',
   },
   {
     id: '3',
-    name: 'Lockdown Lifesavers Unisex Hoodie',
-    imagePath: './images/hoodie.jpg',
-    price: '19.99',
+    name: 'Lockdown Lifesavers Frisbee',
+    imagePath: './images/frisbee.jpg',
+    price: '3.99',
   },
 ]
 
