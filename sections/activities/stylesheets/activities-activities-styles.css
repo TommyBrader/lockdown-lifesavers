@@ -3,6 +3,7 @@
 #button-row2 {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   padding: 40px;
 }
 
