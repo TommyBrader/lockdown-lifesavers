@@ -279,15 +279,17 @@ function submitClicked(event) {
     }
   })
   if (checkGuess) {
-    const firstRowInput = {0: inputGuess[0], 1: inputGuess[1], 2: inputGuess[2], 3: inputGuess[3]}
-    const secondRowInput = {0: inputGuess[4], 1: inputGuess[5], 2: inputGuess[6], 3: inputGuess[7]}
-    const thirdRowInput = {0: inputGuess[8], 1: inputGuess[9], 2: inputGuess[10], 3: inputGuess[11]}
-    const fourthRowInput = {0: inputGuess[12], 1: inputGuess[13], 2: inputGuess[14], 3: inputGuess[15]}
+    const firstRowInput = [[inputGuess[0]], [inputGuess[1]], [inputGuess[2]], [inputGuess[3]]]
+    const secondRowInput = [[inputGuess[4]], [inputGuess[5]], [inputGuess[6]], [inputGuess[7]]]
+    const thirdRowInput = [[inputGuess[8]], [inputGuess[9]], [inputGuess[10]], [inputGuess[11]]]
+    const fourthRowInput = [[inputGuess[12]], [inputGuess[13]], [inputGuess[14]], [inputGuess[15]]]
 
-    const firstColumnInput = {0: inputGuess[0], 1: inputGuess[4], 2: inputGuess[8], 3: inputGuess[12]}
-    const secondColumnInput = {0: inputGuess[1], 1: inputGuess[5], 2: inputGuess[9], 3: inputGuess[13]}
-    const thirdColumnInput = {0: inputGuess[2], 1: inputGuess[6], 2: inputGuess[10], 3: inputGuess[14]}
-    const fourthColumnInput = {0: inputGuess[3], 1: inputGuess[7], 2: inputGuess[11], 3: inputGuess[15]}
+    // const firstColumnInput = {0: inputGuess[0], 1: inputGuess[4], 2: inputGuess[8], 3: inputGuess[12]}
+    // const secondColumnInput = {0: inputGuess[1], 1: inputGuess[5], 2: inputGuess[9], 3: inputGuess[13]}
+    // const thirdColumnInput = {0: inputGuess[2], 1: inputGuess[6], 2: inputGuess[10], 3: inputGuess[14]}
+    // const fourthColumnInput = {0: inputGuess[3], 1: inputGuess[7], 2: inputGuess[11], 3: inputGuess[15]}
+
+    const fullGuess = [firstRowInput, secondRowInput, thirdRowInput, fourthRowInput]
   }
   numOfAttempts++
 }
