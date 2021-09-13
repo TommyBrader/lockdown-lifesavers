@@ -77,6 +77,8 @@ function generateClues() {
     bottomClue[i].textContent = gridSelected.bottom[i]
   }
 
+  // -- IGNORE -- The commented code below is a work in progress for generating own boards
+
   // for (let i = 0; i<gridSize; i++) {
   //   // Generates top clues at random
   //   topClue[i].textContent = Math.floor(Math.random() * gridSize) + 1
@@ -91,8 +93,6 @@ function generateClues() {
   //     messageArea.textContent = 'There was an error loading your puzzle, please refresh the page'
   //   }
   // }
-
-
   // if (topClue[0].textContent == 1) {
   //   leftClue[0].textContent = 1
   // }
