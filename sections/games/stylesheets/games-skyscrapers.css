@@ -42,3 +42,20 @@ table {
   border-spacing: 0px;
   margin: 10px auto 10px auto;
 }
+
+#submit-button {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  border: hsl(0, 0%, 0%) 1px solid;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 5px;
+  margin: 5px;
+  transition: 0.2s;
+}
+
+#submit-button:hover {
+  cursor: pointer;
+  background-color: hsl(110, 65%, 71%);
+  color: hsl(0, 0%, 100%);
+}
