@@ -1,3 +1,4 @@
+/* Message Area */
 #message {
   width: 288px;
   height: 48px;
@@ -6,6 +7,7 @@
   font-size: 1.2rem;
 }
 
+/* Board */
 #board {
   width: 526px;
   height: 560px;
@@ -35,6 +37,7 @@ table {
   margin: 10px auto 50px auto;
 }
 
+/* Guess */
 #guessing-container {
   width: 90%;
   display: flex;
@@ -72,6 +75,7 @@ table {
   color: hsl(0, 0%, 100%);
 }
 
+/* Game Elements */
 .miss {
   color: hsl(0, 0%, 100%);
 }

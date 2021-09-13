@@ -1,3 +1,13 @@
+/* Message Area */
+#message {
+  width: 288px;
+  height: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+}
+
+/* Gameboard */
 #board {
   width: 526px;
   margin: auto;
@@ -43,6 +53,7 @@ table {
   margin: 10px auto 10px auto;
 }
 
+/* Submit Attempt */
 #submit-button {
   background-color: hsl(0, 0%, 100%);
   color: hsl(0, 0%, 0%);
