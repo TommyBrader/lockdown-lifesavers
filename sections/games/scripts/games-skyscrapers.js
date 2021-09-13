@@ -65,6 +65,8 @@ let fourthSolutionColumn = [t0l3, t1l3, t2l3, t3l3]
 
 let solution = [firstSolutionRow, secondSolutionRow, thirdSolutionRow, fourthSolutionRow]
 
+let fullGuess
+
 function generateClues() {
   const randomNumber = Math.floor(Math.random() * grids.length)
   const gridSelected = grids[randomNumber]
@@ -289,9 +291,12 @@ function submitClicked(event) {
     // const thirdColumnInput = {0: inputGuess[2], 1: inputGuess[6], 2: inputGuess[10], 3: inputGuess[14]}
     // const fourthColumnInput = {0: inputGuess[3], 1: inputGuess[7], 2: inputGuess[11], 3: inputGuess[15]}
 
-    const fullGuess = [firstRowInput, secondRowInput, thirdRowInput, fourthRowInput]
+    fullGuess = [firstRowInput, secondRowInput, thirdRowInput, fourthRowInput]
   }
   numOfAttempts++
+  if (fullGuess == solution) {
+    messageArea.textContent = `Congratulations! You have completed the board in ${numOfAttempts} guesses`
+  }
 }
 
 generateClues()
