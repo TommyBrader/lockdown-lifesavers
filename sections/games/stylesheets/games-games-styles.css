@@ -1,0 +1,26 @@
+/* Buttons */
+#button-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.games-button {
+  width: 300px;
+  height: 200px;
+  border: 1px hsl(0, 0%, 0%) solid;
+  border-radius: 10px;
+  background-color: hsl(110, 65%, 81%);
+  color: hsl(0, 0%, 100%);
+  font-size: 3rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.games-button:hover {
+  cursor: pointer;
+  background-color: hsl(110, 65%, 76%);
+}
