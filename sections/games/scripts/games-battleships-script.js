@@ -1,8 +1,9 @@
+// Initial variables
 const messageArea = document.querySelector('#message')
 const fireButton = document.querySelector('#fire-button')
 const guessInput = document.querySelector('#guess')
 
-// Updating the display
+// Updating display
 let view = {
   displayMessage: function(msg) {
     messageArea.textContent = msg
@@ -19,7 +20,7 @@ let view = {
   }
 }
 
-// Holds the state of the game
+// Holds state of the game
 let model = {
   boardSize: 8,
   numShips: 5,
@@ -64,7 +65,6 @@ let model = {
               locations = this.generateShip()
           } while (this.collision(locations))
           this.ships[i].locations = locations
-          console.log(locations)
       }
   },
   generateShip: function() {
@@ -102,7 +102,7 @@ let model = {
   }
 }
 
-// Handles user input and game logic
+// Handles input and game logic
 let controller = {
   guesses: 0,
   processGuess: function(guess) {
@@ -144,21 +144,21 @@ function parseGuess(guess) {
   return null
 }
 
-//function for setting initial state of the board
+// Sets initial state of the board
 function init() {
   fireButton.addEventListener('click', handleFireButton)
   guessInput.onkeydown = handleKeyPress
   model.generateShipLocations()
 }
 
-//function for retrieving player guesses
+// Retrieves player guesses
 function handleFireButton() {
   let guess = guessInput.value
   controller.processGuess(guess)
   guessInput.value = ''
 }
 
-//function for letting the user press enter rather than clicking fire
+// Lets user press enter instead of clicking the button every time
 function handleKeyPress(e) {
   if (e.keyCode === 13) {
       fireButton.click()
@@ -166,5 +166,5 @@ function handleKeyPress(e) {
   }
 }
 
-//makes sure init is running when the page loads, meaning that guesses can be taken
-window.onload = init
+// window.onload = init
+init()

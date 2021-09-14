@@ -1,5 +1,7 @@
+/* Import Font */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
 
+/* Styles for Homepage */
 body {
   background-color: hsl(0, 0%, 93%);
   background-image: url(./images/back.png);

@@ -1,3 +1,4 @@
+// Penguins
 const penguin = [
   {
     name: 'Adelie',
@@ -73,6 +74,7 @@ const penguin = [
   },
 ]
 
+// Selects random penguin and displays it
 function randomPenguin() {
   const penguinFigure = document.querySelector('#penguin-container')
   const penguinImage = document.createElement('img')

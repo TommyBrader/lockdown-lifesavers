@@ -1,3 +1,4 @@
+// Initial Variables for clues, page elements and variables used later in functions
 const clue = document.querySelectorAll('.clue')
 const topClue = {0: clue[0], 1: clue[1], 2: clue[2], 3: clue[3]}
 const leftClue = {0: clue[4], 1: clue[6], 2: clue[8], 3: clue[10]}
@@ -79,8 +80,10 @@ let fourthSolutionColumn = [t0l3, t1l3, t2l3, t3l3]
 let solution = [firstSolutionRow, secondSolutionRow, thirdSolutionRow, fourthSolutionRow]
 let columnSolution = [firstSolutionColumn, secondSolutionColumn, thirdSolutionColumn, fourthSolutionColumn]
 
+// Guess variable
 let fullGuess
 
+// Generates the clues by randomly selecting a grid, displays them, and then solves the grid so we have a solution
 function generateClues() {
   const randomNumber = Math.floor(Math.random() * grids.length)
   const gridSelected = grids[randomNumber]
@@ -402,7 +405,6 @@ function generateClues() {
       count++
     }
   }
-  console.log(solution)
 }
 
 // Click Submit Attempt
@@ -410,10 +412,10 @@ submitAttempt.addEventListener('click', submitClicked)
 
 function submitClicked(event) {
   event.preventDefault()
-  console.log('submit')
   const inputGuess = document.querySelectorAll('.guess-input')
   messageArea.textContent = ''
   let checkGuess = true
+  // Checks if guess is valid
   inputGuess.forEach(guess => {
     if (guess.value == '' || guess.value == undefined) {
       messageArea.textContent = 'You must fill in all cells with integers 1 to 4 before guessing'
@@ -423,6 +425,7 @@ function submitClicked(event) {
       checkGuess = false
     }
   })
+  // If guess is valid, guess is retrieved and put in same format as solution
   if (checkGuess) {
     const firstRowInput = [[parseInt(inputGuess[0].value)], [parseInt(inputGuess[1].value)], [parseInt(inputGuess[2].value)], [parseInt(inputGuess[3].value)]]
     const secondRowInput = [[parseInt(inputGuess[4].value)], [parseInt(inputGuess[5].value)], [parseInt(inputGuess[6].value)], [parseInt(inputGuess[7].value)]]
@@ -432,8 +435,8 @@ function submitClicked(event) {
     fullGuess = [firstRowInput, secondRowInput, thirdRowInput, fourthRowInput]
   }
   numOfAttempts++
-  console.log(fullGuess)
-  console.log(solution)
+
+  // Compares guess with solution
   if (JSON.stringify(fullGuess) == JSON.stringify(solution)) {
     messageArea.textContent = `Congratulations! You have completed the board in ${numOfAttempts} guess(es)`
     inputGuess.forEach(guess =>{

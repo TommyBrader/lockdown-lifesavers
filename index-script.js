@@ -1,3 +1,4 @@
+// Website sections and relevant information
 const sections = [
   {
     name: 'Information',

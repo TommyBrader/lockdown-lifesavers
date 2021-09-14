@@ -113,6 +113,7 @@ function removeButtonStyle() {
     element.style.removeProperty('color'))
 }
 
+// Displays relevant products when category is selected
 productCategories.forEach(element => element.addEventListener('click', function(event) {
   event.preventDefault()
 
@@ -168,8 +169,6 @@ productCategories.forEach(element => element.addEventListener('click', function(
     productPrice.textContent = '£' + item.price
     bottomOfProduct.appendChild(productPrice)
 
-    // const addToBasket = document.createElement('figcaption')
-    // addToBasket.classList.add('add-to-basket')
     const addToBasketButton = document.createElement('button')
     addToBasketButton.classList.add('add-to-basket-button')
     addToBasketButton.setAttribute('value', element.innerText)
