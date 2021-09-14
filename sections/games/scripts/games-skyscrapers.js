@@ -14,12 +14,6 @@ let indexToFind
 // Grids
 const grids = [
   {
-    top: [2,3,1,2],
-    left: [3,1,2,2],
-    right: [2,3,3,1],
-    bottom: [2,2,3,1]
-  },
-  {
     top: [3,2,1,3],
     left: [3,2,4,1],
     right: [2,2,1,2],
@@ -30,6 +24,24 @@ const grids = [
     left: [2,1,2,3],
     right: [1,2,3,2],
     bottom: [2,2,1,4]
+  },
+  {
+    top: [4,1,2,2],
+    left: [2,3,2,1],
+    right: [2,2,1,3],
+    bottom: [1,4,2,2]
+  },
+  {
+    top: [3,3,1,2],
+    left: [2,4,2,1],
+    right: [2,1,3,3],
+    bottom: [1,2,4,2]
+  },
+  {
+    top: [4,1,2,2],
+    left: [2,3,2,1],
+    right: [2,1,2,3],
+    bottom: [1,4,2,2]
   },
 ]
 
@@ -78,35 +90,6 @@ function generateClues() {
     rightClue[i].textContent = gridSelected.right[i]
     bottomClue[i].textContent = gridSelected.bottom[i]
   }
-
-  // -- IGNORE -- The commented code below is a work in progress for generating own boards
-
-  // for (let i = 0; i<gridSize; i++) {
-  //   // Generates top clues at random
-  //   topClue[i].textContent = Math.floor(Math.random() * gridSize) + 1
-  //   // Generates bottom clues based off top clues
-  //   if (topClue[i].textContent == 4) {
-  //     bottomClue[i].textContent = 1
-  //   } else if (topClue[i].textContent == 2 || topClue[i].textContent == 3) {
-  //     bottomClue[i].textContent = Math.floor(Math.random() * (gridSize - 1)) + 1
-  //   } else if (topClue[i].textContent == 1) {
-  //     bottomClue[i].textContent = Math.floor(Math.random() * (gridSize - 1)) + 2
-  //   } else {
-  //     messageArea.textContent = 'There was an error loading your puzzle, please refresh the page'
-  //   }
-  // }
-  // if (topClue[0].textContent == 1) {
-  //   leftClue[0].textContent = 1
-  // }
-  // if (bottomClue[3].textContent == 1) {
-  //   rightClue[3].textContent = 1
-  // }
-  // if (topClue[3].textContent == 1) {
-  //   rightClue[0].textContent = 1
-  // }
-  // if (bottomClue[0].textContent == 1) {
-  //   leftClue[3].textContent = 1
-  // }
 
   // Initial Affect on solution array by clues
   for (let i=0; i<4; i++) {
@@ -314,9 +297,9 @@ function generateClues() {
       if (index > -1) {thirdSolutionRow[i].splice(index, 1)}
     }
 
-    // Need to iterate over statements multiple times, arbitrary 100 iterations selected
+    // Need to iterate over statements multiple times, arbitrary 10 iterations selected
     let count = 0
-    while (count < 100) {
+    while (count < 10) {
       // Remove possibilities where value has been found in other cell in row/column
       for (let i=0; i<4; i++) {
         for (let j=0; j<4; j++) {
@@ -349,7 +332,7 @@ function generateClues() {
         }
       }
 
-      // Finds any cell that must equal a certain value based on other posibility lists
+      // Finds any cell that must equal a certain value based on other possibility lists
       for (let i=0; i<4; i++) {
         for (let j=0; j<4; j++) {
           columnSolution[i][j].forEach(value => {
@@ -374,11 +357,11 @@ function generateClues() {
               }
                 if (colSolValArr0 == -1 && colSolValArr1 == -1 && colSolValArr2 == -1) {
                   index = columnSolution[i][j].indexOf(valueArray[0])
-                  if (index > -1) {columnSolution.splice(index, 1)}
+                  if (index > -1) {columnSolution[i][j].splice(index, 1)}
                   index = columnSolution[i][j].indexOf(valueArray[1])
-                  if (index > -1) {columnSolution.splice(index, 1)}
+                  if (index > -1) {columnSolution[i][j].splice(index, 1)}
                   index = columnSolution[i][j].indexOf(valueArray[2])
-                  if (index > -1) {columnSolution.splice(index, 1)}
+                  if (index > -1) {columnSolution[i][j].splice(index, 1)}
                 }
           })
         }
@@ -407,11 +390,11 @@ function generateClues() {
               }
                 if (solValArr0 == -1 && solValArr1 == -1 && solValArr2 == -1) {
                   index = solution[i][j].indexOf(valueArray[0])
-                  if (index > -1) {solution.splice(index, 1)}
+                  if (index > -1) {solution[i][j].splice(index, 1)}
                   index = solution[i][j].indexOf(valueArray[1])
-                  if (index > -1) {solution.splice(index, 1)}
+                  if (index > -1) {solution[i][j].splice(index, 1)}
                   index = solution[i][j].indexOf(valueArray[2])
-                  if (index > -1) {solution.splice(index, 1)}
+                  if (index > -1) {solution[i][j].splice(index, 1)}
                 }
           })
         }
@@ -419,7 +402,6 @@ function generateClues() {
       count++
     }
   }
-
   console.log(solution)
 }
 
@@ -447,11 +429,6 @@ function submitClicked(event) {
     const thirdRowInput = [[parseInt(inputGuess[8].value)], [parseInt(inputGuess[9].value)], [parseInt(inputGuess[10].value)], [parseInt(inputGuess[11].value)]]
     const fourthRowInput = [[parseInt(inputGuess[12].value)], [parseInt(inputGuess[13].value)], [parseInt(inputGuess[14].value)], [parseInt(inputGuess[15].value)]]
 
-    // const firstColumnInput = {0: inputGuess[0], 1: inputGuess[4], 2: inputGuess[8], 3: inputGuess[12]}
-    // const secondColumnInput = {0: inputGuess[1], 1: inputGuess[5], 2: inputGuess[9], 3: inputGuess[13]}
-    // const thirdColumnInput = {0: inputGuess[2], 1: inputGuess[6], 2: inputGuess[10], 3: inputGuess[14]}
-    // const fourthColumnInput = {0: inputGuess[3], 1: inputGuess[7], 2: inputGuess[11], 3: inputGuess[15]}
-
     fullGuess = [firstRowInput, secondRowInput, thirdRowInput, fourthRowInput]
   }
   numOfAttempts++
@@ -459,6 +436,8 @@ function submitClicked(event) {
   console.log(solution)
   if (JSON.stringify(fullGuess) == JSON.stringify(solution)) {
     messageArea.textContent = `Congratulations! You have completed the board in ${numOfAttempts} guess(es)`
+  } else {
+    messageArea.textContent = `Guess Incorrect. Please try again`
   }
 }
 
