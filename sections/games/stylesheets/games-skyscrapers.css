@@ -90,6 +90,11 @@ table {
   td {
     width: 36px;
     height: 36px;
+    font-size: 1.2rem;
+  }
+  td input {
+    height: 30px;
+    width: 30px;
   }
   #skyscrapers-container {
     margin: 0px;
