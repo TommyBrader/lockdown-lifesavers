@@ -114,7 +114,8 @@ function createSecondaryNav() {
         const comingSoonMessage = document.createElement('h1')
         comingSoonMessage.setAttribute('id', 'coming-soon')
         comingSoonMessage.textContent = 'Coming Soon...'
-        comingSoonMessage.style.textDecoration = `underline solid hsl(${sections[i].hue}, ${sections[i].saturation}%, ${sections[i].lightness}%)`
+        comingSoonMessage.style.borderTop = `4px solid hsl(${sections[i].hue}, ${sections[i].saturation}%, ${sections[i].lightness}%)`
+        comingSoonMessage.style.borderBottom = `4px solid hsl(${sections[i].hue}, ${sections[i].saturation}%, ${sections[i].lightness}%)`
         contentSection.appendChild(comingSoonMessage)
       }
     }

@@ -222,6 +222,7 @@ body,
   justify-content: center;
   align-items: center;
   font-size: 5rem;
+  padding: 20px 0 20px 0;
 }
 
 /* Media Queries */
@@ -241,6 +242,9 @@ body,
 @media screen and (max-width: 770px) {
   #heading-main {
     font-size: 4rem;
+  }
+  #coming-soon {
+    text-align: center;
   }
 }
 
@@ -310,5 +314,9 @@ body,
   #heading-main {
     margin-left: 10px;
     margin-right: auto;
+  }
+
+  #coming-soon {
+    font-size: 4rem;
   }
 }
