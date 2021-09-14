@@ -415,11 +415,11 @@ function submitClicked(event) {
   messageArea.textContent = ''
   let checkGuess = true
   inputGuess.forEach(guess => {
-    if (guess.value == '') {
-      messageArea.textContent = 'You must fill in all cells before guessing'
+    if (guess.value == '' || guess.value == undefined) {
+      messageArea.textContent = 'You must fill in all cells with integers 1 to 4 before guessing'
       checkGuess = false
-    } else if (guess.value != 1 && guess.value != 2 && guess.value != 3 && guess.value != 4) {
-      messageArea.textContent = 'You may only enter integers 1 to 4 as part of your guess'
+    } else if (guess.value > 4 || guess.value < 1){
+      messageArea.textContent = 'Guesses must be integers between 1 and 4'
       checkGuess = false
     }
   })
@@ -436,7 +436,10 @@ function submitClicked(event) {
   console.log(solution)
   if (JSON.stringify(fullGuess) == JSON.stringify(solution)) {
     messageArea.textContent = `Congratulations! You have completed the board in ${numOfAttempts} guess(es)`
-  } else {
+    inputGuess.forEach(guess =>{
+      guess.disabled = true
+    })
+  } else if (messageArea.textContent == '') {
     messageArea.textContent = `Guess Incorrect. Please try again`
   }
 }

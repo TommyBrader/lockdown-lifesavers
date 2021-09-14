@@ -32,8 +32,6 @@ th {
 
 td {
   background-color: hsl(110, 65%, 81%);
-  /* background-image: url(../images/battleships-wave.png);
-  background-repeat: repeat; */
   border: hsl(0, 0%, 0%) 1px solid;
   text-align: center;
 }
@@ -43,6 +41,8 @@ td input {
   height: 80%;
   margin: auto;
   background-color: hsl(110, 65%, 81%);
+  background-image: url(../images/skyscrapers-tower.png);
+  background-repeat: repeat;
   border: none;
   text-align: center;
   font-size: 2.3rem;
