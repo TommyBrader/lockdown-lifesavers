@@ -79,3 +79,24 @@ table {
 .miss {
   color: hsl(0, 0%, 100%);
 }
+
+/* Media Queries */
+@media screen and (max-width: 780px) {
+  .battleships-container {
+    margin: 20px 0 20px 0;
+  }
+  #board {
+    width: 263px;
+    height: 420px;
+    background-image: url(../images/battleship-grid-small.png);
+    background-size: 270px 340px;
+  }
+  td {
+    width: 24px;
+    height: 24px;
+  }
+  #message {
+    width: 250px;
+    height: 60px;
+  }
+}

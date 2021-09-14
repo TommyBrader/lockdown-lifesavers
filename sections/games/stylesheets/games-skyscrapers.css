@@ -70,3 +70,28 @@ table {
   background-color: hsl(110, 65%, 71%);
   color: hsl(0, 0%, 100%);
 }
+
+/* Media Queries */
+@media screen and (max-width: 770px) {
+  #board {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  #board {
+    width: 90%;
+  }
+  #message {
+    width: 200px;
+    height: 80px;
+  }
+  th,
+  td {
+    width: 36px;
+    height: 36px;
+  }
+  #skyscrapers-container {
+    margin: 0px;
+  }
+}

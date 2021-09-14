@@ -24,3 +24,18 @@
   cursor: pointer;
   background-color: hsl(110, 65%, 76%);
 }
+
+/* Media Queries */
+@media screen and (max-width: 900px) {
+  .games-button {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .games-button {
+    width: 200px;
+    height: 150px;
+    font-size: 2rem;
+  }
+}

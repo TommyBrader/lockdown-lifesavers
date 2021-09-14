@@ -237,6 +237,12 @@ body,
   }
 }
 
+@media screen and (max-width: 770px) {
+  #heading-main {
+    font-size: 4rem;
+  }
+}
+
 @media screen and (max-width: 670px) {
   #main-pages li a {
     padding: 0 10px;
@@ -268,12 +274,6 @@ body,
   }
 }
 
-@media screen and (max-width: 595px) {
-  #heading-main {
-    font-size: 4rem;
-  }
-}
-
 @media screen and (max-width: 520px) {
   #secondary-pages li a {
     padding: 0 10px;
@@ -294,6 +294,12 @@ body,
   }
 }
 
+@media screen and (max-width: 435px) {
+  #heading-main {
+    font-size: 3rem;
+  }
+}
+
 @media screen and (max-width: 345px) {
   #main-pages li a,
   #secondary-pages li a {
@@ -301,7 +307,7 @@ body,
   }
 
   #heading-main {
-    margin-left: auto;
+    margin-left: 10px;
     margin-right: auto;
   }
 }

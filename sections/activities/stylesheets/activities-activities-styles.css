@@ -25,3 +25,27 @@
   cursor: pointer;
   background-color: hsl(0, 71%, 67%);
 }
+
+/* Media Queries */
+@media screen and (max-width: 900px) {
+  .activities-button {
+    margin-bottom: 40px;
+  }
+
+  #button-row1,
+  #button-row2 {
+    margin-top: -80px;
+  }
+
+  #activities-intro {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .activities-button {
+    width: 200px;
+    height: 150px;
+    font-size: 2rem;
+  }
+}

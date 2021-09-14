@@ -77,6 +77,7 @@
 .tvs-bottom {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .film-date,
@@ -125,4 +126,28 @@
   color: hsl(0, 71%, 67%);
   margin-top: 0;
   padding-top: 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 720px) {
+  .film-image,
+  .tv-image {
+    width: 300px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .film-image,
+  .tv-image {
+    width: 250px;
+    height: 125px;
+  }
+  .film-score,
+  .tv-score {
+    font-size: 1.2rem;
+  }
+  .sub-heading {
+    font-size: 1.8rem;
+  }
 }
